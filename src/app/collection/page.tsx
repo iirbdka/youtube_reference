@@ -38,10 +38,10 @@ export default function CollectionPage() {
               <div className="bg-primary/10 rounded-lg p-2">
                 <Bookmark className="h-6 w-6 text-primary" />
               </div>
-              My Collection
+              내 컬렉션
             </h1>
             <p className="text-muted-foreground mt-1">
-              {savedItems.length} saved reference{savedItems.length !== 1 ? 's' : ''}
+              저장된 레퍼런스 {savedItems.length}개
             </p>
           </div>
 
@@ -50,26 +50,26 @@ export default function CollectionPage() {
               <DialogTrigger asChild>
                 <Button variant="outline" size="sm" className="gap-2 text-destructive hover:text-destructive">
                   <Trash2 className="h-4 w-4" />
-                  Clear All
+                  전체 삭제
                 </Button>
               </DialogTrigger>
               <DialogContent>
                 <DialogHeader>
                   <DialogTitle className="flex items-center gap-2">
                     <AlertCircle className="h-5 w-5 text-destructive" />
-                    Clear Collection
+                    컬렉션 비우기
                   </DialogTitle>
                   <DialogDescription>
-                    Are you sure you want to remove all {savedItems.length} saved references?
-                    This action cannot be undone.
+                    저장된 {savedItems.length}개의 레퍼런스를 모두 삭제하시겠습니까?
+                    이 작업은 되돌릴 수 없습니다.
                   </DialogDescription>
                 </DialogHeader>
                 <DialogFooter>
                   <Button variant="outline" onClick={() => setShowClearDialog(false)}>
-                    Cancel
+                    취소
                   </Button>
                   <Button variant="destructive" onClick={handleClearAll}>
-                    Clear All
+                    전체 삭제
                   </Button>
                 </DialogFooter>
               </DialogContent>
@@ -93,13 +93,13 @@ export default function CollectionPage() {
                 <Bookmark className="h-10 w-10 text-muted-foreground" />
               </div>
             </div>
-            <h2 className="text-xl font-semibold mb-2">No Saved References</h2>
+            <h2 className="text-xl font-semibold mb-2">저장된 레퍼런스가 없습니다</h2>
             <p className="text-muted-foreground max-w-md mb-6">
-              Start building your reference collection by saving videos from search results.
-              Add notes to remember why each video is useful.
+              검색 결과에서 마음에 드는 영상을 저장해보세요.
+              메모를 추가하여 나중에 참고할 수 있습니다.
             </p>
             <Button asChild>
-              <Link href="/">Start Searching</Link>
+              <Link href="/">검색하러 가기</Link>
             </Button>
           </div>
         )}
@@ -108,10 +108,9 @@ export default function CollectionPage() {
       {/* Footer */}
       <footer className="border-t border-border/40 py-6">
         <div className="container mx-auto px-4 text-center text-sm text-muted-foreground">
-          <p>RefTube — YouTube Reference Search Service</p>
+          <p>RefTube — 유튜브 레퍼런스 검색 서비스</p>
         </div>
       </footer>
     </div>
   );
 }
-

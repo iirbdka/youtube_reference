@@ -28,7 +28,7 @@ export function TagCloud({ className }: TagCloudProps) {
     <div className={cn('space-y-3', className)}>
       <div className="flex items-center gap-2">
         <Hash className="h-4 w-4 text-primary" />
-        <h3 className="text-sm font-medium text-muted-foreground">Related Tags</h3>
+        <h3 className="text-sm font-medium text-muted-foreground">연관 태그</h3>
       </div>
       
       <div className="flex flex-wrap gap-2">
@@ -55,4 +55,3 @@ export function TagCloud({ className }: TagCloudProps) {
     </div>
   );
 }
-

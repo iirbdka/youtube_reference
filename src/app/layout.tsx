@@ -15,8 +15,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "RefTube - YouTube Reference Search",
-  description: "Discover and analyze YouTube video references with performance insights",
+  title: "RefTube - 유튜브 레퍼런스 검색",
+  description: "고성과 유튜브 영상을 발굴하고 효율 지표를 분석하는 레퍼런스 검색 서비스",
 };
 
 export default function RootLayout({

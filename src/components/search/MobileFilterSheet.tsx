@@ -17,12 +17,12 @@ export function MobileFilterSheet() {
       <SheetTrigger asChild>
         <Button variant="outline" size="sm" className="lg:hidden gap-2">
           <SlidersHorizontal className="h-4 w-4" />
-          Filters
+          필터
         </Button>
       </SheetTrigger>
       <SheetContent side="left" className="w-[280px] sm:w-[320px]">
         <SheetHeader>
-          <SheetTitle>Search Filters</SheetTitle>
+          <SheetTitle>검색 필터</SheetTitle>
         </SheetHeader>
         <div className="mt-6">
           <FilterSidebar />
@@ -31,4 +31,3 @@ export function MobileFilterSheet() {
     </Sheet>
   );
 }
-

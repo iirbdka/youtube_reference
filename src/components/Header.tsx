@@ -38,7 +38,7 @@ export function Header() {
           >
             <Link href="/">
               <Search className="h-4 w-4" />
-              <span className="hidden sm:inline">Search</span>
+              <span className="hidden sm:inline">검색</span>
             </Link>
           </Button>
           
@@ -53,7 +53,7 @@ export function Header() {
           >
             <Link href="/collection">
               <Bookmark className="h-4 w-4" />
-              <span className="hidden sm:inline">Collection</span>
+              <span className="hidden sm:inline">컬렉션</span>
             </Link>
           </Button>
         </nav>
@@ -61,4 +61,3 @@ export function Header() {
     </header>
   );
 }
-

@@ -81,7 +81,7 @@ export function VideoCard({ video, showMemo, memo }: VideoCardProps) {
             onClick={handleWatchClick}
           >
             <ExternalLink className="h-3.5 w-3.5" />
-            Watch
+            보기
           </Button>
           <Button
             size="sm"
@@ -92,12 +92,12 @@ export function VideoCard({ video, showMemo, memo }: VideoCardProps) {
             {isSaved ? (
               <>
                 <BookmarkCheck className="h-3.5 w-3.5" />
-                Saved
+                저장됨
               </>
             ) : (
               <>
                 <Bookmark className="h-3.5 w-3.5" />
-                Save
+                저장
               </>
             )}
           </Button>
@@ -146,4 +146,3 @@ export function VideoCard({ video, showMemo, memo }: VideoCardProps) {
     </Card>
   );
 }
-

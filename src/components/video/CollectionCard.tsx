@@ -39,7 +39,7 @@ export function CollectionCard({ video }: CollectionCardProps) {
 
   const formatSavedDate = (dateString: string) => {
     const date = new Date(dateString);
-    return date.toLocaleDateString('en-US', {
+    return date.toLocaleDateString('ko-KR', {
       month: 'short',
       day: 'numeric',
       year: 'numeric',
@@ -90,7 +90,7 @@ export function CollectionCard({ video }: CollectionCardProps) {
             onClick={handleWatchClick}
           >
             <ExternalLink className="h-3.5 w-3.5" />
-            Watch
+            보기
           </Button>
           <Button
             size="sm"
@@ -99,7 +99,7 @@ export function CollectionCard({ video }: CollectionCardProps) {
             onClick={() => removeFromCollection(video.id)}
           >
             <Trash2 className="h-3.5 w-3.5" />
-            Remove
+            삭제
           </Button>
         </div>
       </div>
@@ -116,13 +116,13 @@ export function CollectionCard({ video }: CollectionCardProps) {
         {/* Channel & Date */}
         <div className="flex items-center justify-between text-xs text-muted-foreground">
           <span className="truncate max-w-[60%]">{video.channelTitle}</span>
-          <span className="shrink-0">Saved {formatSavedDate(video.savedAt)}</span>
+          <span className="shrink-0">{formatSavedDate(video.savedAt)} 저장</span>
         </div>
 
         {/* Stats row */}
         <div className="flex items-center justify-between gap-2">
           <span className="text-xs text-muted-foreground">
-            {formatNumber(video.viewCount)} views
+            조회수 {formatNumber(video.viewCount)}
           </span>
           {video.efficiencyScore !== undefined && (
             <EfficiencyBadge score={video.efficiencyScore} />
@@ -136,14 +136,14 @@ export function CollectionCard({ video }: CollectionCardProps) {
               <Textarea
                 value={memoValue}
                 onChange={(e) => setMemoValue(e.target.value)}
-                placeholder="Add a note..."
+                placeholder="메모를 입력하세요..."
                 className="min-h-[80px] text-sm bg-background/50"
                 autoFocus
               />
               <div className="flex gap-2">
                 <Button size="sm" className="gap-1.5 flex-1" onClick={handleSaveMemo}>
                   <Save className="h-3.5 w-3.5" />
-                  Save
+                  저장
                 </Button>
                 <Button
                   size="sm"
@@ -176,7 +176,7 @@ export function CollectionCard({ video }: CollectionCardProps) {
               ) : (
                 <button className="text-xs text-muted-foreground hover:text-foreground transition-colors flex items-center gap-1.5 w-full">
                   <Edit3 className="h-3 w-3" />
-                  Add a note...
+                  메모 추가...
                 </button>
               )}
             </div>
@@ -186,4 +186,3 @@ export function CollectionCard({ video }: CollectionCardProps) {
     </Card>
   );
 }
-

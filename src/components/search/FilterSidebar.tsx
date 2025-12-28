@@ -18,30 +18,30 @@ import {
 } from '@/types';
 
 const durationOptions: { value: DurationFilter; label: string }[] = [
-  { value: 'any', label: 'Any Duration' },
-  { value: 'short', label: 'Short (< 4 min)' },
-  { value: 'medium', label: 'Medium (4-20 min)' },
-  { value: 'long', label: 'Long (> 20 min)' },
+  { value: 'any', label: '전체 길이' },
+  { value: 'short', label: '짧은 영상 (4분 미만)' },
+  { value: 'medium', label: '중간 길이 (4-20분)' },
+  { value: 'long', label: '긴 영상 (20분 이상)' },
 ];
 
 const sortByOptions: { value: SortByFilter; label: string }[] = [
-  { value: 'relevance', label: 'Relevance' },
-  { value: 'date', label: 'Upload Date' },
-  { value: 'viewCount', label: 'View Count' },
-  { value: 'rating', label: 'Rating' },
+  { value: 'relevance', label: '관련성' },
+  { value: 'date', label: '업로드 날짜' },
+  { value: 'viewCount', label: '조회수' },
+  { value: 'rating', label: '평점' },
 ];
 
 const uploadDateOptions: { value: UploadDateFilter; label: string }[] = [
-  { value: 'any', label: 'Any Time' },
-  { value: 'hour', label: 'Last Hour' },
-  { value: 'today', label: 'Today' },
-  { value: 'week', label: 'This Week' },
-  { value: 'month', label: 'This Month' },
-  { value: 'year', label: 'This Year' },
+  { value: 'any', label: '전체 기간' },
+  { value: 'hour', label: '지난 1시간' },
+  { value: 'today', label: '오늘' },
+  { value: 'week', label: '이번 주' },
+  { value: 'month', label: '이번 달' },
+  { value: 'year', label: '올해' },
 ];
 
 const licenseOptions: { value: LicenseFilter; label: string }[] = [
-  { value: 'any', label: 'Any License' },
+  { value: 'any', label: '전체 라이선스' },
   { value: 'creativeCommon', label: 'Creative Commons' },
 ];
 
@@ -67,14 +67,14 @@ export function FilterSidebar({ className }: FilterSidebarProps) {
     <aside className={className}>
       <div className="flex items-center gap-2 mb-4">
         <Filter className="h-4 w-4 text-primary" />
-        <h2 className="font-semibold text-sm uppercase tracking-wider">Filters</h2>
+        <h2 className="font-semibold text-sm uppercase tracking-wider">필터</h2>
       </div>
       
       <div className="space-y-5">
         {/* Duration */}
         <div className="space-y-2">
           <label className="text-xs font-medium text-muted-foreground uppercase tracking-wide">
-            Duration
+            영상 길이
           </label>
           <Select
             value={filters.duration}
@@ -98,7 +98,7 @@ export function FilterSidebar({ className }: FilterSidebarProps) {
         {/* Sort By */}
         <div className="space-y-2">
           <label className="text-xs font-medium text-muted-foreground uppercase tracking-wide">
-            Sort By
+            정렬 기준
           </label>
           <Select
             value={filters.sortBy}
@@ -122,7 +122,7 @@ export function FilterSidebar({ className }: FilterSidebarProps) {
         {/* Upload Date */}
         <div className="space-y-2">
           <label className="text-xs font-medium text-muted-foreground uppercase tracking-wide">
-            Upload Date
+            업로드 날짜
           </label>
           <Select
             value={filters.uploadDate}
@@ -146,7 +146,7 @@ export function FilterSidebar({ className }: FilterSidebarProps) {
         {/* License */}
         <div className="space-y-2">
           <label className="text-xs font-medium text-muted-foreground uppercase tracking-wide">
-            License
+            라이선스
           </label>
           <Select
             value={filters.license}
@@ -168,4 +168,3 @@ export function FilterSidebar({ className }: FilterSidebarProps) {
     </aside>
   );
 }
-

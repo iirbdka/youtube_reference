@@ -30,12 +30,12 @@ export default function HomePage() {
         <div className="container mx-auto px-4 relative">
           <div className="text-center mb-8">
             <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight mb-4">
-              Find Your Next{' '}
-              <span className="text-primary">Reference</span>
+              나만의{' '}
+              <span className="text-primary">레퍼런스</span>를 찾아보세요
             </h1>
             <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
-              Discover high-performing YouTube videos with performance insights.
-              Analyze efficiency scores and find trending content across languages.
+              고성과 유튜브 영상을 발굴하고 효율 지표를 분석하세요.
+              다양한 언어로 트렌딩 콘텐츠를 탐색할 수 있습니다.
             </p>
           </div>
 
@@ -80,7 +80,7 @@ export default function HomePage() {
                 <div className="flex items-center gap-2 mb-4">
                   <Sparkles className="h-4 w-4 text-primary" />
                   <span className="text-sm text-muted-foreground">
-                    {results.length} results for &quot;{query}&quot;
+                    &quot;{query}&quot; 검색 결과 {results.length}개
                   </span>
                 </div>
                 <VideoGrid videos={results} />
@@ -100,10 +100,10 @@ export default function HomePage() {
                   {isLoading ? (
                     <>
                       <Loader2 className="h-4 w-4 animate-spin" />
-                      Loading...
+                      불러오는 중...
                     </>
                   ) : (
-                    'Load More'
+                    '더 보기'
                   )}
                 </Button>
               </div>
@@ -118,9 +118,9 @@ export default function HomePage() {
                     <Search className="h-10 w-10 text-muted-foreground" />
                   </div>
                 </div>
-                <h2 className="text-xl font-semibold mb-2">Start Your Search</h2>
+                <h2 className="text-xl font-semibold mb-2">검색을 시작하세요</h2>
                 <p className="text-muted-foreground max-w-md">
-                  Enter keywords above to discover video references with performance analytics and insights.
+                  키워드를 입력하면 성과 분석과 인사이트가 포함된 영상 레퍼런스를 찾아드립니다.
                 </p>
               </div>
             )}
@@ -131,7 +131,7 @@ export default function HomePage() {
       {/* Footer */}
       <footer className="border-t border-border/40 py-6">
         <div className="container mx-auto px-4 text-center text-sm text-muted-foreground">
-          <p>RefTube — YouTube Reference Search Service</p>
+          <p>RefTube — 유튜브 레퍼런스 검색 서비스</p>
         </div>
       </footer>
     </div>

@@ -15,9 +15,9 @@ import { useSearch } from '@/contexts/SearchContext';
 import { LanguageCode } from '@/types';
 
 const languages: { code: LanguageCode; label: string; flag: string }[] = [
-  { code: 'ko', label: 'Korean', flag: '🇰🇷' },
-  { code: 'en', label: 'English', flag: '🇺🇸' },
-  { code: 'ja', label: 'Japanese', flag: '🇯🇵' },
+  { code: 'ko', label: '한국어', flag: '🇰🇷' },
+  { code: 'en', label: '영어', flag: '🇺🇸' },
+  { code: 'ja', label: '일본어', flag: '🇯🇵' },
 ];
 
 export function SearchBar() {
@@ -38,7 +38,7 @@ export function SearchBar() {
         <Search className="absolute left-3 top-1/2 -translate-y-1/2 h-4 w-4 text-muted-foreground" />
         <Input
           type="text"
-          placeholder="Search for video references..."
+          placeholder="영상 레퍼런스 검색..."
           value={inputValue}
           onChange={(e) => setInputValue(e.target.value)}
           className="pl-10 h-12 text-base bg-background/80 backdrop-blur-sm border-border/50 focus:border-primary/50"
@@ -72,13 +72,12 @@ export function SearchBar() {
         {isLoading ? (
           <>
             <Loader2 className="mr-2 h-4 w-4 animate-spin" />
-            Searching
+            검색 중
           </>
         ) : (
-          'Search'
+          '검색'
         )}
       </Button>
     </form>
   );
 }
-
